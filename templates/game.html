@@ -1,0 +1,62 @@
+{% extends "index.html" %} <!-- it combines game.html to index.html it is better to separate like this -->
+
+{% block body%}
+<div>
+	<h2 class="text-center">CSCI110 Tic Tac Toe</h2>
+	<div>
+		<div class="col-md-3 "></div>
+		<div class="col-md-6 col-sm-12 col-xs-12">
+			<table>
+				<tr>
+					<td><button class="table_btn" id = "pos_0"> </button></td> <!-- pos_0 is used in js -->
+					<td><button class="table_btn" id = "pos_1"> </button></td>
+					<td><button class="table_btn" id = "pos_2"> </button></td>
+				</tr>
+
+				<tr>
+					<td><button class="table_btn" id = "pos_3">  </button></td>
+					<td><button class="table_btn" id = "pos_4">  </button></td>
+					<td><button class="table_btn" id = "pos_5">  </button></td>
+				</tr>
+
+				<tr>
+					<td><button class="table_btn" id = "pos_6">  </button></td>
+					<td><button class="table_btn" id = "pos_7">  </button></td>
+					<td><button class="table_btn" id = "pos_8">  </button></td>
+				</tr>
+
+			</table>
+			<marquee>Fisk University CSCI 110</marquee>
+		</div>
+		<div>
+			<h5>Total Wins: {{win}}</h5> <!-- {{win}}} is a print statement. prints out the integer of win-->
+			<h5>Total Loses: {{lose}}</h5>
+			<h5>Total Draws: {{draw}}</h5>
+			{% if not logged_user %}
+				<h5>Signup <a href="/signup"> here</a> to save your progress.</h5>
+			{% endif %}
+		</div>
+	</div>
+
+	<!-- Modal -->
+	<div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h4 class="modal-title" id="modalTitle">This is the title</h4>
+				</div>
+					<div class="modal-body">
+						<div id="modalContent">THIS </div>
+					</div>
+
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default modal-btn" data-dismiss="modal">Play Again</button>
+						<!-- <button type="button" class="btn btn-primary">Save changes</button> -->
+					</div>
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+{%endblock%}

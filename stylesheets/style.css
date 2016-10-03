@@ -1,0 +1,34 @@
+html, body{
+    Background: #300000;
+    color: #fff;
+}
+
+.bg-danger{
+    Background: @brand-danger;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.table_btn{
+    font-size: 60px;
+    height: 175px;
+    width: 175px;
+    border: 2px solid #fff;
+    color: #fff;
+    border-radius: 0;
+    background: #996633;
+}
+
+#winModal{
+    color: #000;
+}
+
+.form-input{
+    margin-bottom: 5px;
+}
+
+.navbar-default{
+    border-radius: 0 !important;
+    -moz-border-radius: 0 !important;
+}
+

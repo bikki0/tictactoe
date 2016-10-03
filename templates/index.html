@@ -1,0 +1,49 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>CSCI110 TTT</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+	<script src="/javascript/index.js"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous"/>
+	<link rel="stylesheet" href="/stylesheets/style.css"/>
+	<link rel="icon" href="https://cdn3.iconfinder.com/data/icons/brain-games/1042/Tic-Tac-Toe-Game-red.png" type="image/x-icon">
+
+</head>
+
+<body>
+	<nav class="navbar navbar-inverse">  <!-- this is the navigation bar -->
+	<div class="container-fluid">
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		    <ul class="nav navbar-nav">
+		       <li><a href="/">Home</a></li>
+		    </ul>
+		    <ul class="nav navbar-nav">
+		       <li><a href="https://www.youtube.com/watch?v=-3Y_cgfeasc" target="_blank">Watch a Tutorial</a></li>
+		    </ul>
+		     
+		    <ul class="nav navbar-nav navbar-right">
+		    	{% if logged_user %} <!-- gets the value of logged_user from main -->
+		       		<li><a href="#">{{logged_user.user_name}}</a></li>
+		       		<li style="margin-top: 10px">
+		       			<form method="POST", action="/logout">
+		       				<input type="submit" class="btn btn-primary" value="Logout">
+		       			</form>
+		       		</li>
+		       	{% else %}
+		       		<li><a href="/login">Log In</a></li>
+		       		<li><a href="/signup">Sign Up</a></li>
+		       	{% endif %}
+		    </ul>
+		</div><!-- /.navbar-collapse -->
+	  </div><!-- /.container-fluid -->
+	</nav>
+
+	{% block body %}
+	{% endblock %}
+
+</body>
+
+</html>

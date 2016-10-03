@@ -1,0 +1,24 @@
+{% extends "index.html"%}
+
+{% block body %}
+<div>
+	<div class="col-md-3"></div>
+	<div class="text-center col-md-6">
+		<div>
+			<h3>SignUp</h3>
+		</div>
+		<div class="col-centered">
+			<form class="form" method="post">
+				<input name="fullname" placeholder="Full Name" id="fullname" 
+				class="form-input form-control" />
+				<input name="username" placeholder="Username" id="username" 
+				class="form-input form-control" />
+				<input name="password" placeholder="Password"  
+				class="form-input form-control" type="password">
+				<input type="submit" value="Signup" class="btn btn-primary">
+				<div class="error">{{error}}</div> <!--gets error message from main.py and shows if there is any -->
+			</form>
+		</div>
+	</div>
+</div>
+{% endblock%}

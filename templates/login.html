@@ -1,0 +1,21 @@
+{% extends "index.html"%}
+
+{% block body %}
+<div class="container">
+	<div class="col-md-3"></div>
+	<div class="text-center col-md-6">
+		<div>
+			<h3>Login</h3>
+		</div>
+		<div class="col-centered">
+			<form class="form" method="post" action="/login">
+				<input name="username" placeholder="Username" id="username" class="form-control" />
+				<br>
+				<input name="password" placeholder="Password"  class="form-control" type="password">
+				<br>
+				<input type="submit" value="Login" class="btn btn-primary">
+				<div class = "error">{{error}}</div> <!--gets error message from main.py and shows if there is any -->
+			</form>
+		</div>
+	</div>
+{% endblock%}

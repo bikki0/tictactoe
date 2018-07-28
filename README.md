@@ -1,4 +1,4 @@
-# tictactoe: Introduction to Computer Science project
+# TicTacToe: Introduction to Computer Science project
 Created a web application to play tictactoe game.
 
 Backend implemented in python and frontend in JS.
